@@ -13,6 +13,44 @@
 
    NEW: Visual Studio Code IDE support added (you need to install PlatformIO)
    Arduino IDE is supported as before, but stuff was renamed and moved to different folders!
+
+   German translation, simple configuration and alternative Light System by Technikfreak2002 aka Electrix6502: https://github.com/Technikfreak2002/Rc_Engine_Sound_ESP32
+*/
+
+// ****************************************************************************************************************************
+// ** WICHTIGER HINWEIS!                                                                                                     **
+// ****************************************************************************************************************************
+// Alle Einstellungen werden in den oben aufgelistenten Tabs vorgenomen!
+// Bitte keine Änderungen in dieser Datei!
+// Das kann zu ungewollten Fehlern führen!
+// ****************************************************************************************************************************
+
+//
+// =======================================================================================================
+// FEHLER CODES (BLINKER)
+// =======================================================================================================
+//
+/* Konstant an = Kein SBUS signal (prüfe ob "sbusInverted" true / false in "2_adjustmentsRemote.h")
+   Anzahl der Impulse = der Kanal ist nicht zwischen 1400 und 1600 und kann nicht automatisch klaibriert
+   werden. (z.B zwei mal Blinken = Kanal 2)
+   Überprüfe die Trimmung und die Einstellung für die Auto-Kalibrierung!
+*/
+
+//
+// =======================================================================================================
+// ! ! I M P O R T A N T ! !   ALL USER SETTINGS ARE DONE IN THE FOLLOWING TABS, WHICH ARE DISPLAYED ABOVE
+// (ADJUST THEM BEFORE CODE UPLOAD), DO NOT CHANGE ANYTHING IN THIS TAB EXCEPT THE DEBUG OPTIONS
+// =======================================================================================================
+//
+
+//
+// =======================================================================================================
+// ERROR CODES (INDICATOR LIGHTS)
+// =======================================================================================================
+//
+/* Constantly on = no SBUS signal (check "sbusInverted" true / false in "2_adjustmentsRemote.h")
+   Number of blinks = this channel signal is not between 1400 and 1600 microseconds and can't be auto calibrated
+   (check channel trim settings)
 */
 
 const float codeVersion = 9.0; // Software revision.
@@ -29,26 +67,11 @@ void processRawChannels();
 void failsafeRcSignals();
 void channelZero();
 
-//
-// =======================================================================================================
-// ERROR CODES (INDICATOR LIGHTS)
-// =======================================================================================================
-//
-/* Constantly on = no SBUS signal (check "sbusInverted" true / false in "2_adjustmentsRemote.h")
-   Number of blinks = this channel signal is not between 1400 and 1600 microseconds and can't be auto calibrated
-   (check channel trim settings)
-*/
+// Alle nötigen Einstellungen werden in diesen Tabs (Dateien) vorgenommen!
+#include "01_adjustmentsVehicle.h"       // <<------- Wähle hier das Fahrzeug aus 
+#include "02_Generelle_Einstellungen.h"  // <<------- Vereinfachte Konfiguration
 
-//
-// =======================================================================================================
-// ! ! I M P O R T A N T ! !   ALL USER SETTINGS ARE DONE IN THE FOLLOWING TABS, WHICH ARE DISPLAYED ABOVE
-// (ADJUST THEM BEFORE CODE UPLOAD), DO NOT CHANGE ANYTHING IN THIS TAB EXCEPT THE DEBUG OPTIONS
-// =======================================================================================================
-//
-
-// All the required user settings are done in the following .h files:
-#include "01_adjustmentsVehicle.h"       // <<------- Select the vehicle you want to simulate
-#include "02_adjustmentsRemote.h"        // <<------- Remote control system related adjustments
+//#include "02_adjustmentsRemote.h"        // <<------- Remote control system related adjustments
 #include "03_adjustmentsESC.h"           // <<------- ESC related adjustments
 #include "04_adjustmentsTransmission.h"  // <<------- Transmission related adjustments
 #include "05_adjustmentsShaker.h"        // <<------- Shaker related adjustments
@@ -59,7 +82,7 @@ void channelZero();
 #include "10_adjustmentsTrailer.h"      // <<------- Trailer related adjustments
 
 // DEBUG options can slow down the playback loop! Only uncomment them for debugging, may slow down your system!
-#define CHANNEL_DEBUG // uncomment it for input signal & general debugging informations
+//#define CHANNEL_DEBUG // uncomment it for input signal & general debugging informations
 //#define ESC_DEBUG // uncomment it to debug the ESC
 //#define AUTO_TRANS_DEBUG // uncomment it to debug the automatic transmission
 //#define MANUAL_TRANS_DEBUG // uncomment it to debug the manual transmission
@@ -1269,7 +1292,11 @@ void setup() {
   rtc_wdt_enable();           // Start the RTC WDT timer
   //rtc_wdt_disable();            // Disable the RTC WDT timer
   rtc_wdt_protect_on();         // Enable RTC WDT write protection
-
+  
+//MP: zur Vereinfachung einige Variablen hier neu zuweisen. Const modifier entfernt! 
+  indicatorOn = IND_ON;
+  INDICATOR_DIR = IND_DIR;
+  
   // Serial setup
   Serial.begin(115200); // USB serial (for DEBUG)
 

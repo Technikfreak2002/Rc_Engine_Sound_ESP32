@@ -1,5 +1,8 @@
-// VEHICLE SETTINGS ****************************************************************************************************
-// Select the vehicle preset you want (uncomment the one you want, remove //, never more than one)
+// ****************************************************************************************************************************
+// ** FAHRZEUG EINSTELLUNGEN                                                                                                 **
+// ****************************************************************************************************************************
+// Wähle ein Profil das zu deinem Fahrzeug passt! (entferne "//", IMMER NUR EINE AUSWAHL MÖGLICH!!!)
+// ****************************************************************************************************************************
 
 // Master --------
 //#include "vehicles/00_Master.h" // This master preset file contains all available sound files, which are not used in existing vehicle presets
@@ -26,7 +29,7 @@
 //#include "vehicles/ScaniaV8_50ton.h" // SCANIA V8 50 ton truck. Unknown model. Bad quality!
 //#include "vehicles/ScaniaV8.h" // SCANIA V8 truck, unknown model
 //#include "vehicles/1000HpScaniaV8.h" // 1000 HP SCANIA V8 truck with open pipes. Insane sound! Good bass speakers reqired
-#include "vehicles/Scania143.h" // SCANIA 143 V8 - the legend! The best sounding in my opinion
+//#include "vehicles/Scania143.h" // SCANIA 143 V8 - the legend! The best sounding in my opinion
 //#include "vehicles/ScaniaV8Firetruck.h" // SCANIA V8 firetruck, automatic Allison 6 speed transmission with torque converter, "Martinshorn" siren
 //#include "vehicles/VolvoFH16_750.h" // Volvo FH16 750 truck. Inline 6, 750 horses, open pipes!
 //#include "vehicles/VolvoFH16_OpenPipe.h" // Volvo FH truck. Inline 6, open pipes, alternative version
@@ -72,7 +75,7 @@
 //#include "vehicles/RAM2500_Cummins12V.h" // Dodge RAM 2500 with inline 6, 12V Cummins 5.9l Diesel, manual transmission
 //#include "vehicles/RAM2500_Cummins12Vautomatic.h" // Dodge RAM 2500 with inline 6, 12V Cummins 5.9l Diesel, automatic transmission
 //#include "vehicles/GMCsierra.h" // GMC Sierra V8 pickup, 3 speed automatic transmission
-//#include "vehicles/ChevyNovaCoupeV8_P407.h" // 1975 Chevy Nova Coupe V8, special version for HG-P407, 3 speed automatic transmission
+#include "vehicles/ChevyNovaCoupeV8_P407.h" // 1975 Chevy Nova Coupe V8, special version for HG-P407, 3 speed automatic transmission
 //#include "vehicles/JeepWranglerRubicon392V8.h" // 2021 Jeep Wrangler Rubicon HEMI 392 V8 (starter needs rework)
 //#include "vehicles/JeepWranglerRubicon392V8_2.h" // 2021 Jeep Wrangler Rubicon HEMI 392 V8 (insane bass!)
 
