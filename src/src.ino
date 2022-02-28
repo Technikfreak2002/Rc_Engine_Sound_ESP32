@@ -47,15 +47,15 @@ void channelZero();
 //
 
 // All the required user settings are done in the following .h files:
-#include "1_adjustmentsVehicle.h"       // <<------- Select the vehicle you want to simulate
-#include "2_adjustmentsRemote.h"        // <<------- Remote control system related adjustments
-#include "3_adjustmentsESC.h"           // <<------- ESC related adjustments
-#include "4_adjustmentsTransmission.h"  // <<------- Transmission related adjustments
-#include "5_adjustmentsShaker.h"        // <<------- Shaker related adjustments
-#include "6_adjustmentsLights.h"        // <<------- Lights related adjustments
-#include "7_adjustmentsServos.h"        // <<------- Servo output related adjustments
-#include "8_adjustmentsSound.h"         // <<------- Sound related adjustments
-#include "9_adjustmentsDashboard.h"     // <<------- Dashboard related adjustments
+#include "01_adjustmentsVehicle.h"       // <<------- Select the vehicle you want to simulate
+#include "02_adjustmentsRemote.h"        // <<------- Remote control system related adjustments
+#include "03_adjustmentsESC.h"           // <<------- ESC related adjustments
+#include "04_adjustmentsTransmission.h"  // <<------- Transmission related adjustments
+#include "05_adjustmentsShaker.h"        // <<------- Shaker related adjustments
+#include "06_adjustmentsLights.h"        // <<------- Lights related adjustments
+#include "07_adjustmentsServos.h"        // <<------- Servo output related adjustments
+#include "08_adjustmentsSound.h"         // <<------- Sound related adjustments
+#include "09_adjustmentsDashboard.h"     // <<------- Dashboard related adjustments
 #include "10_adjustmentsTrailer.h"      // <<------- Trailer related adjustments
 
 // DEBUG options can slow down the playback loop! Only uncomment them for debugging, may slow down your system!
