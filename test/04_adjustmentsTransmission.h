@@ -13,7 +13,7 @@
 //#define VIRTUAL_16_SPEED_SEQUENTIAL // This is still experimental!
 
 //#define TRANSMISSION_NEUTRAL Allows to put the transmission in neutral. This can't be used, if the "Mode 1" button is used for other stuff!
-#define TRANSMISSION_NEUTRAL
+//#define TRANSMISSION_NEUTRAL
 
 //#define MODE1_SHIFTING The 2 speed transmission is shifted by the "Mode 1" button instead of the 3 position switch (Micro RC remote only).
 // This is often used in WPL vehicles with 2 speed transmission, used as off road reducer
@@ -28,4 +28,4 @@ uint16_t automaticReverseAccelerationPercentage = 100;
 // Automatic transmission with overdrive (lower RPM in top gear, gear ratio lower than 1:1, 4 & 6 speed only)
 #define OVERDRIVE // This is usually on, but don't use it for double clutch transmissions!
 
-#define DOUBLE_CLUTCH // Double-clutch (Zwischengas) Enable this for older trucks without synchronised gears
+//#define DOUBLE_CLUTCH // Double-clutch (Zwischengas) Enable this for older trucks without synchronised gears

@@ -3,17 +3,38 @@
 // ****************************************************************************************************************************
 // GENERELLE EINSTELLUNGEN                                                                                                
 // ****************************************************************************************************************************
+// Hier sind die wichtigsten Einstellungen zusammengefasst. Zusammen mit der Fahrzeugauswahl sollte die Software bereits laufen
+// Feineinstellungen können in 03_Erweiterte_Einstellungen.h vorgenommen werden. Z.B. Welche Beleuchtung, Helligkeit usw.
+// Experten können sich in 04_Experten_Einstellungen.h umsehen. ESC, Getriebe usw. werden hier eingestellt.
+// Einstellungen die Relevant für das gewählte Fahrzeug sind, müssen im Fahrzeugprofil im Ordner "vehicles" vorgenommen werden!
+// Achtung! Diese Dateien sind noch nicht übersetzt!
+
+/* General SOUND SETTINGS ************************************************************************************************
+ *  
+ * Most sound settings are done in the vehicle configuration files in the /vehicles/ directory.
+ * 
+ */
+
+//#define NO_SIREN // siren sound is not played, if defined
+ 
+const  uint8_t numberOfVolumeSteps = 3; // The mumber of volume steps below
+const uint8_t masterVolumePercentage[] = {100, 66, 44}; // loud, medium, silent (more than 100% may cause distortions)
 
 // ****************************************************************************************************************************
 // Automatische Funktionen
 // ****************************************************************************************************************************
 // Entferne "//" um die Automatik auszuwählen
 
+// Beleuchtung
 //#define AUTO_LIGHTS // Lichter werden mit dem Motorstatus oder mit Soundcontroller CH5 gesteuert
+
+// Motor
 #define AUTO_ENGINE_ON_OFF    // Motor wird automatisch mit "GAS" gestartet oder mit Soundcontroller CH5
-#define AUTO_INDICATORS       // Blinker werden automatisch mit der Lenkung oder mit Soundcontroller CH6 gesteuert.
-#define IND_ON    100         // Blinker werden ab +/- diesem Wert eingeschaltet. (z.B 1500 + 300 = 1800 Blinker Rechts an, 1500 - 300 = 1200 Blinker Links an)
-#define IND_DIR   true        // Bei normaler Lenkung true, bei invertierter Lenkung false
+
+// Blinker
+#define AUTO_INDICATORS             // Blinker werden automatisch mit der Lenkung oder mit Soundcontroller CH6 gesteuert.
+const uint16_t indicatorOn = 300;   // Blinker werden ab +/- diesem Wert eingeschaltet. (z.B 1500 + 300 = 1800 Blinker Rechts an, 1500 - 300 = 1200 Blinker Links an)
+const boolean INDICATOR_DIR = true; // Bei normaler Lenkung true, bei invertierter Lenkung false
 
 // ****************************************************************************************************************************
 // EMPFÄNGER
@@ -41,15 +62,15 @@
 // ****************************************************************************************************************************
 
 // Interner Name #######  //Empfänger Kanal ##  // Soundcontroller Kanal ##########################################
-#define STEERING          1                     // CH1 steering
-#define GEARBOX           6                     // CH2 3 position switch for gearbox (left throttle in tracked mode)
-#define THROTTLE          3                     // CH3 throttle & brake (right throttle in tracked mode)
-#define HORN              5                     // CH4 horn and bluelight / siren
-#define FUNCTION_R        2                     // CH5 jake brake, high / low beam, headlight flasher, engine on / off
-#define FUNCTION_L        4                     // CH6 indicators, hazards
-#define POT2              8                     // CH7 pot 2
-#define MODE1             7                     // CH8 mode 1 switch
-#define MODE2             9                     // CH9 mode 2 switch
+#define STEERING          1                     // CH1 Lenkung
+#define GEARBOX           6                     // CH2 3 Pos Schalter für das Getriebe (Bei Kettenfahrzeugen Gas Links)
+#define THROTTLE          3                     // CH3 Gas und Bremse (Bei Kettenfahrzeugen Gas Rechts)
+#define HORN              5                     // CH4 Hupe und Blaulicht / Sirene
+#define FUNCTION_R        2                     // CH5 jake brake, Abblendlicht/Fernlicht, Lichthupe, Motor Ein/Aus
+#define FUNCTION_L        4                     // CH6 Blinker, Warnblinker
+#define POT2              8                     // CH7 Poti 2
+#define MODE1             7                     // CH8 mode 1 Schalter
+#define MODE2             9                     // CH9 mode 2 Schalter
 #define MOMENTARY1        NONE                  // CH10
 #define HAZARDS           NONE                  // CH11
 #define INDICATOR_LEFT    NONE                  // CH12

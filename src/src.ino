@@ -68,18 +68,20 @@ void failsafeRcSignals();
 void channelZero();
 
 // Alle nötigen Einstellungen werden in diesen Tabs (Dateien) vorgenommen!
-#include "01_adjustmentsVehicle.h"       // <<------- Wähle hier das Fahrzeug aus 
-#include "02_Generelle_Einstellungen.h"  // <<------- Vereinfachte Konfiguration
+#include "01_Fahrzeug_Einstellungen.h"      // <<------- Wähle hier das Fahrzeug aus 
+#include "02_Generelle_Einstellungen.h"     // <<------- Vereinfachte Konfiguration
+#include "03_Erweiterte_Einstellungen.h"    // <<------- Erweiterte Einstellungen
+#include "04_Experten_Einstellungen.h"      // <<------- Experten Einstellungen
 
 //#include "02_adjustmentsRemote.h"        // <<------- Remote control system related adjustments
-#include "03_adjustmentsESC.h"           // <<------- ESC related adjustments
-#include "04_adjustmentsTransmission.h"  // <<------- Transmission related adjustments
-#include "05_adjustmentsShaker.h"        // <<------- Shaker related adjustments
-#include "06_adjustmentsLights.h"        // <<------- Lights related adjustments
-#include "07_adjustmentsServos.h"        // <<------- Servo output related adjustments
-#include "08_adjustmentsSound.h"         // <<------- Sound related adjustments
-#include "09_adjustmentsDashboard.h"     // <<------- Dashboard related adjustments
-#include "10_adjustmentsTrailer.h"      // <<------- Trailer related adjustments
+//#include "03_adjustmentsESC.h"           // <<------- ESC related adjustments
+//#include "04_adjustmentsTransmission.h"  // <<------- Transmission related adjustments
+//#include "05_adjustmentsShaker.h"        // <<------- Shaker related adjustments
+//#include "06_adjustmentsLights.h"        // <<------- Lights related adjustments
+//#include "07_adjustmentsServos.h"        // <<------- Servo output related adjustments
+//#include "08_adjustmentsSound.h"         // <<------- Sound related adjustments
+//#include "09_adjustmentsDashboard.h"     // <<------- Dashboard related adjustments
+//#include "10_adjustmentsTrailer.h"      // <<------- Trailer related adjustments
 
 // DEBUG options can slow down the playback loop! Only uncomment them for debugging, may slow down your system!
 //#define CHANNEL_DEBUG // uncomment it for input signal & general debugging informations
@@ -1292,10 +1294,6 @@ void setup() {
   rtc_wdt_enable();           // Start the RTC WDT timer
   //rtc_wdt_disable();            // Disable the RTC WDT timer
   rtc_wdt_protect_on();         // Enable RTC WDT write protection
-  
-//MP: zur Vereinfachung einige Variablen hier neu zuweisen. Const modifier entfernt! 
-  indicatorOn = IND_ON;
-  INDICATOR_DIR = IND_DIR;
   
   // Serial setup
   Serial.begin(115200); // USB serial (for DEBUG)

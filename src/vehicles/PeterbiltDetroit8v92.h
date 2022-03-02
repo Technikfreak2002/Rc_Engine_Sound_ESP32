@@ -139,8 +139,8 @@ volatile int reversingVolumePercentage = 70; // Adjust the reversing sound volum
 
 // Choose the indicator / turn signal options --------
 volatile int indicatorVolumePercentage = 100; // Adjust the indicator sound volume (usually = 100%)
-uint16_t indicatorOn = 300; // The indicator will be switched on above +/- this value, if wheels are turned
-boolean INDICATOR_DIR = true; // adjust indicator direction with true or false
+//const uint16_t indicatorOn = 300; // The indicator will be switched on above +/- this value, if wheels are turned
+//const boolean INDICATOR_DIR = true; // adjust indicator direction with true or false
 #include "sounds/Indicator.h" // "Tick-Tack" sound
 
 // Choose the trailer couplig & uncoupling sounds (uncomment the ones you want) --------
