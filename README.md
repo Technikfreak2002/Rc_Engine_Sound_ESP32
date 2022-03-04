@@ -1,4 +1,5 @@
 # This is an Arduino RC engine sound & light controller for ESP32
+# Dieser Fork zielt auf eine vereinfachte Konfiguration und wird auf deutsch übersetzt.
 It's based on the ATmega 328 version: https://github.com/TheDIYGuy999/Rc_Engine_Sound
 and on bitlunis Halloween example: https://github.com/bitluni/MotionPumpkin
 
