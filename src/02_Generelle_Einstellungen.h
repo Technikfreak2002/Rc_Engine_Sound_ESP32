@@ -9,16 +9,16 @@
 // Einstellungen die Relevant für das gewählte Fahrzeug sind, müssen im Fahrzeugprofil im Ordner "vehicles" vorgenommen werden!
 // Achtung! Diese Dateien sind noch nicht übersetzt!
 
-/* General SOUND SETTINGS ************************************************************************************************
- *  
- * Most sound settings are done in the vehicle configuration files in the /vehicles/ directory.
- * 
- */
+// ****************************************************************************************************************************
+// SOUND EINSTELLUNGEN                                                                                                
+// ****************************************************************************************************************************
+// Die meisten Soundeinstellungen werden im Fahrzeugprofil im Ordner "vehicles" vorgenommen. Hier werden Motorsound und
+// Zusatzsounds eingestellt. (diese Dateien sind noch nicht übersetzt!)
 
-//#define NO_SIREN // siren sound is not played, if defined
+//#define NO_SIREN // Hier kann der Sirenensound ausgeschaltet werden.
  
-const  uint8_t numberOfVolumeSteps = 3; // The mumber of volume steps below
-const uint8_t masterVolumePercentage[] = {100, 66, 44}; // loud, medium, silent (more than 100% may cause distortions)
+const  uint8_t numberOfVolumeSteps = 3; // Anzahl der Lautstärkeschritte in der nächsten Zeile
+const uint8_t masterVolumePercentage[] = {100, 66, 44}; // laut, mittel, leise (Werte über 100 führen zu kratzen!)
 
 // ****************************************************************************************************************************
 // Automatische Funktionen
@@ -26,14 +26,14 @@ const uint8_t masterVolumePercentage[] = {100, 66, 44}; // loud, medium, silent 
 // Entferne "//" um die Automatik auszuwählen
 
 // Beleuchtung
-//#define AUTO_LIGHTS // Lichter werden mit dem Motorstatus oder mit Soundcontroller CH5 gesteuert
+#define AUTO_LIGHTS // Lichter werden mit dem Motorstatus oder mit Soundcontroller CH5 gesteuert
 
 // Motor
 #define AUTO_ENGINE_ON_OFF    // Motor wird automatisch mit "GAS" gestartet oder mit Soundcontroller CH5
 
 // Blinker
 #define AUTO_INDICATORS             // Blinker werden automatisch mit der Lenkung oder mit Soundcontroller CH6 gesteuert.
-const uint16_t indicatorOn = 300;   // Blinker werden ab +/- diesem Wert eingeschaltet. (z.B 1500 + 300 = 1800 Blinker Rechts an, 1500 - 300 = 1200 Blinker Links an)
+const uint16_t indicatorOn = 150;   // Blinker werden ab +/- diesem Wert eingeschaltet. (z.B 1500 + 300 = 1800 Blinker Rechts an, 1500 - 300 = 1200 Blinker Links an)
 const boolean INDICATOR_DIR = true; // Bei normaler Lenkung true, bei invertierter Lenkung false
 
 // ****************************************************************************************************************************

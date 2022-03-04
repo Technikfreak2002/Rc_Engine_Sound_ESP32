@@ -7,6 +7,9 @@
 // Master --------
 //#include "vehicles/00_Master.h" // This master preset file contains all available sound files, which are not used in existing vehicle presets
 
+// Traxxas
+#include "vehicles/Traxxas_Summit_1_8.h" // Traxxas Summit 1:8 mit 1975 Chevy Nova Coupe V8
+
 // US trucks --------
 //#include "vehicles/CaboverCAT3408.h" // Cabover truck with Caterpillar 3408 V8 Diesel
 //#include "vehicles/PeterbiltDetroit8v92.h" // Peterbilt 359 with Detroit 8V92 V8 2 stroke Diesel
@@ -75,7 +78,7 @@
 //#include "vehicles/RAM2500_Cummins12V.h" // Dodge RAM 2500 with inline 6, 12V Cummins 5.9l Diesel, manual transmission
 //#include "vehicles/RAM2500_Cummins12Vautomatic.h" // Dodge RAM 2500 with inline 6, 12V Cummins 5.9l Diesel, automatic transmission
 //#include "vehicles/GMCsierra.h" // GMC Sierra V8 pickup, 3 speed automatic transmission
-#include "vehicles/ChevyNovaCoupeV8_P407.h" // 1975 Chevy Nova Coupe V8, special version for HG-P407, 3 speed automatic transmission
+//#include "vehicles/ChevyNovaCoupeV8_P407.h" // 1975 Chevy Nova Coupe V8, special version for HG-P407, 3 speed automatic transmission
 //#include "vehicles/JeepWranglerRubicon392V8.h" // 2021 Jeep Wrangler Rubicon HEMI 392 V8 (starter needs rework)
 //#include "vehicles/JeepWranglerRubicon392V8_2.h" // 2021 Jeep Wrangler Rubicon HEMI 392 V8 (insane bass!)
 
